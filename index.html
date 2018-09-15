@@ -4,9 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Cinema Savvy</title>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
+
+  <div class="container">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"><i class="material-icons">movie_filter</i>Cinema Savvy</a>
+        
+        <ul class="right hide-on-med-and-down">
+          <li><div class="input-field col s6">
+              <input placeholder="Movie Name or Zipcode" id="search-field" type="text" class="validate">
+              <label for="search-field">Search</label>
+            </div></li>
+          <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+ 
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+    <div class="row">
+      <div class="col s8 offset-3" id="movie-info-display">
+
+          <h4 class="header">Movie Info Display</h4>
+          <div class="card horizontal">
+            <div class="card-image movie-poster">
+              <img src="images/movie-poster.png">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content" id="movie-info">
+                <h6>Must Have:</h6>
+                <p>I will hold a the movie info in a table (from Fandango API)</p>
+                <h6>Nice to Have:</h6>
+                <p>I will remove 'Movie Info Table' and display target movie trailer when YouTube API is called (Play Button)</p>
+              </div>
+              <div class="card-action">
+                <a class="btn-floating btn-medium waves-effect waves-light cyan" id="play-button"><i class="material-icons">play_circle_outline</i></a>
+                <p>Play Trailer</p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!--closes col s7-->
+
+
+      <div class="col s3 offset-3" id="theater-location-display">
+
+        <h4 class="header">Theater Location Display</h4>
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" id="map-display" src="images/florian-klauer-415-unsplash.jpg">
+            </div>
+            <div class="card-content" id="theater-locations" >
+              <span class="card-title activator grey-text text-darken-4">Theaters close to you<i class="material-icons right">info_outline</i></span>
+              <p></p>
+            </div>
+            <div class="card-reveal" id="response-table">
+              <span class="card-title grey-text text-darken-4">jVector Map Response Table<i class="material-icons right">close</i></span>
+              <p>This card-reveal will hold the table populated by jVector Map response data.</p>
+            </div>
+          </div>
+
+      </div> <!-- closes col s3-->
+
+    </div>
   
+
+  <!-- Compiled and minified JavaScript for Materialize-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 </html>
