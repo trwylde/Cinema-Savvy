@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cinema Savvy</title>
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <!-- <link rel="shortcut icon" type="image/png" href="images/favicon.png"> -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -31,12 +32,12 @@
           </li>
           <li>
             <div class="input-field col s5">
-              <input placeholder="Zipcode" id="zipcode-field" type="text" class="validate">
+              <input placeholder="Zipcode" id="zipcode-field" type="number" class="validate">
               <label for="search-field">Search</label>
             </div>
           </li>
           <li>
-            <a href="sass.html"><i class="material-icons">search</i></a>
+            <a href=""><i id="searchButton" class="material-icons">search</i></a>
           </li>
         </ul>
         
@@ -49,8 +50,8 @@
 
           <h4 class="header">Movie Info Display</h4>
           <div class="card horizontal">
-            <div class="card-image movie-poster">
-              <img src="images/movie-poster.png">
+            <div class="card-image ">
+              <img src="images/movie-poster.png" id="movie-poster">
             </div>
             <div class="card-stacked">
               <div class="card-content" id="movie-info">
@@ -60,7 +61,8 @@
                 <p>I will remove 'Movie Info Table' and display target movie trailer when YouTube API is called (Play Button)</p>
               </div>
               <div class="card-action">
-                <a class="btn-floating btn-medium waves-effect waves-light cyan" id="play-button"><i class="material-icons">play_circle_outline</i></a>
+                <div id="ytplayer"></div>
+                <a class="btn-floating btn-medium waves-effect waves-light cyan" id="play-button"><i class="material-icons">play_circle_outline</i></a>    
                 <p>Play Trailer</p>
               </div>
             </div>
@@ -93,6 +95,8 @@
 
   <!-- Compiled and minified JavaScript for Materialize-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="javascript/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  
 </body>
 </html>
