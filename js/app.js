@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var movie = "";
+    var movie = "Fight CLub";
 
     
     $("#searchButton").on("click", function(event) {
@@ -35,7 +35,7 @@ $(document).ready(function () {
         var ytFrame = $("<iframe>");
         ytFrame.attr("id","ytplayer");
         ytFrame.attr("type","text/html");
-        ytFrame.attr("width",640);
+        ytFrame.attr("width",540);
         ytFrame.attr("height",360);
         ytFrame.attr("allow","autoplay");
         ytFrame.attr("src","https://www.youtube.com/embed?listType=search&list=" + movie);
