@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
+    var movie = "";
+
     
-    $(".material-icons").on("click", function(event) {
+    $("#searchButton").on("click", function(event) {
 
     event.preventDefault();
     
-    var movie = $("#movie-title-field").val();
+    movie = $("#movie-title-field").val();
     var omdbURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=96837c43";
 
     $.ajax({
@@ -20,14 +22,29 @@ $(document).ready(function () {
 
         $("#movie-poster").attr("src", response.Poster);
         $("#movie-info").html(info);
-    
-  
-  
-  
-  
-  
-        });
+
+
+
     });
-    
+});
+
+    $("#play-button").on("click", function(event) {
+
+        $("#ytplayer").empty();    
+        
+        var ytFrame = $("<iframe>");
+        ytFrame.attr("id","ytplayer");
+        ytFrame.attr("type","text/html");
+        ytFrame.attr("width",640);
+        ytFrame.attr("height",360);
+        ytFrame.attr("allow","autoplay");
+        ytFrame.attr("src","https://www.youtube.com/embed?listType=search&list=" + movie);
+        ytFrame.attr("frameborder",0);
+        $("#ytplayer").append(ytFrame);
+
+
+
+    });
+
 
 });
