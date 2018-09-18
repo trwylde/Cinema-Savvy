@@ -18,7 +18,10 @@ $(document).ready(function () {
         console.log(response);
         var rating = response.Rated;
         var runtime = response.Runtime;
-        var info = "<h5> Rating: " + rating + " " + "Runtime: " + runtime + "</h5>";
+        var plot = response.Plot;
+        var info = "<h5> Rating: " + rating + " " + "Runtime: " + runtime + "</h5>" +  "<h6> Plot : " + plot + "</h6>";
+
+
 
         $("#movie-poster").attr("src", response.Poster);
         $("#movie-info").html(info);
