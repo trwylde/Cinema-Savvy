@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $("#play-button").on("click", function()  {
+    $("#play-button").remove();
+  })
+  
     var movie = "Fight CLub";
 
     
