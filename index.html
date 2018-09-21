@@ -35,73 +35,51 @@
     </nav>
 
 
-    <div class="row">
+    <div class="container">
       <div class="col s6 offset-3" id="movie-info-display">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="images/movie-poster.png" id="movie-poster">
+          </div>
+          <div class="card-stacked">
+            <span class="card-title"></span>
+            <h4 class="header">Fight Club</h4>
+              <div id="ytplayer">
 
-          <h4 class="header">Fight Club</h4>
-          <div class="card horizontal">
-            <div class="card-image ">
-              <img src="images/movie-poster.png" id="movie-poster">
-            </div>
-            <div class="card-stacked">
-              <span class="card-title"></span>
-                <div id="ytplayer">
-                </div>
+                <table id="table" class="centered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Genre</th>
+                      <th scope="col">Score</th>
+                      <th scope="col">Rating</th>
+                      <th scope="col">Runtime</th>
+                    </tr>
+                  </thead>
+            
+                  <tbody>
+                    
+                  </tbody>
+                </table>
+
+                <div id="plot"></div>
+
+              </div>
 
               <div class="card-action" id="play-button">
                 <a class="btn-floating btn-medium waves-effect waves-light cyan" id="play-button"><i class="material-icons">play_circle_outline</i></a>    
                 <p>Play Trailer</p>
               </div>
-            </div>
           </div>
+        </div>
 
-        </div> <!--closes col s7-->
-
-
-      <div class="col s3 offset-3">
-
-          <div class="card" id="review-display">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images\joshua-hoehne-671380-unsplash.jpg" alt"joshua-hoehne>
-              <span class="card-title" id="review-link">
-                
-                <br>
-                
-              </span>
-              
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"> <i class="material-icons right">info_outline</i></span>
-              <p class="movie-title"><!--JQuery will update Movie Title to .movie-title--></p>
-            </div>
-            <div class="card-reveal">
-              <span class="movie-title card-title grey-text text-darken-4" id="movie-info"> <i class="material-icons right">close</i></span>
-              <!--JQuery will update Movie Title to .movie-title-->
-              <table id="table" class="centered">
-                <thead>
-                  <tr>
-                      <th scope="col">Genre</th>
-                      <th scope="col">Score</th>
-                      <th scope="col">Rating</th>
-                      <th scope="col">Runtime</th>
-                  </tr>
-                </thead>
-        
-                <tbody>
-                  
-                </tbody>
-              </table>
-              <div id="plot"></div>
-            </div>
-          </div>
-
-      </div> <!-- closes col s3-->
+        <div class="card-action">
+          <span class="card-title" id="review-link">
+        </div>
+      </div> <!--closes col s7-->
 
     </div>
-
-    <div id="rel-posters" class="container">
-
-    </div>
+       
+    <div id="rel-posters" class="container"></div>
   
 <!--
     <style>
