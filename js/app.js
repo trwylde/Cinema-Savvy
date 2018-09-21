@@ -13,6 +13,8 @@ $(document).ready(function () {
   $("#play-button").show();
   $("#ytplayer").empty();  
   $("#review-link").empty();
+  $("#table tbody").empty();
+  $("#movie-title-field").attr("placeholder","Movie Title");
   
   movie = $("#movie-title-field").val();
   var omdbURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=96837c43";
@@ -28,6 +30,7 @@ $(document).ready(function () {
       var plot = response.Plot;
       var genre = response.Genre;
       var imdbScore= response.imdbRating;
+      var title = response.Title;
      // var info = "<h5> Rating: " + rating + " " + "Runtime: " + runtime + "</h5>" +  "<h6> Plot : " + plot + "</h6>";
      var newRow = $("<tr>");
      var td1 = $("<td>").html(genre);
@@ -40,6 +43,7 @@ $(document).ready(function () {
       $("#movie-poster").attr("src", response.Poster);
       $("#table").append(newRow);
       $("#plot").html("<h6> Plot : " + plot + "</h6>");
+      $(".header").text(title);
 
 
 
@@ -61,6 +65,47 @@ $(document).ready(function () {
 
   });
 
+  var getTMDBIDURL = "https://api.themoviedb.org/3/search/movie?api_key=de609cecd260e54111a9794f1dff58a7&language=en-US&query=" + movie + "'";
+
+  $.ajax({
+      url: getTMDBIDURL,
+      method: "GET"
+    }).then(function(tmdbRes) {
+
+      console.log(tmdbRes.results[0].id);
+      var movieID = tmdbRes.results[0].id;
+      var getSimURL = "https://api.themoviedb.org/3/movie/" + movieID + "/similar?api_key=de609cecd260e54111a9794f1dff58a7";
+
+      $.ajax({
+          url: getSimURL,
+          method: "GET"
+        }).then(function(simRes) {
+
+            $("#rel-posters").append("<h5> Similar Movies </h5>");
+             
+          console.log(simRes);
+          for(var i = 0; i < 4 ; i++)
+          {
+              console.log(simRes.results[i].title);
+              console.log(simRes.results[i].poster_path);
+              var newImg =$("<img>");
+              newImg.addClass("simPosters");
+              newImg.attr("src","https://image.tmdb.org/t/p/w185/" + simRes.results[i].poster_path );
+              newImg.attr("id",simRes.results[i].title );
+              newImg.attr("style","padding: 10px 20px");
+
+              $("#rel-posters").append(newImg);
+              
+
+          }
+    
+    
+      });
+
+
+  });
+
+
 
 });
     $("#play-button").on("click", function(event) {
@@ -77,6 +122,15 @@ $(document).ready(function () {
         ytFrame.attr("frameborder",0);
         $("#ytplayer").append(ytFrame);
 
+
+
+    });
+
+    $("body").on("click", ".simPosters", function() {
+
+        var selectedPoster = $(this).attr("id");
+
+        console.log(selectedPoster);
 
 
     });
