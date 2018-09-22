@@ -15,6 +15,9 @@ $(document).ready(function () {
   $("#review-link").empty();
   $("#table tbody").empty();
   $("#movie-title-field").attr("placeholder","Movie Title");
+  $("#welcome").empty();
+
+  
   
   movie = $("#movie-title-field").val();
   var omdbURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=96837c43";
@@ -79,10 +82,24 @@ $(document).ready(function () {
       url: getTMDBIDURL,
       method: "GET"
     }).then(function(tmdbRes) {
-
+        console.log(tmdbRes.results);
+      
       console.log(tmdbRes.results[0].id);
       var movieID = tmdbRes.results[0].id;
       var getSimURL = "https://api.themoviedb.org/3/movie/" + movieID + "/similar?api_key=de609cecd260e54111a9794f1dff58a7";
+
+      console.log(tmdbRes.results[0].backdrop_path);
+
+      var a = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
+//      $("#backdrop").css('background-image', 'url(' + getImageSrc + ')');
+      console.log(a);
+
+//      var backdrop = $("<img>");
+//        backdrop.addClass("heroImage");
+//        backdrop.attr("src","https://image.tmdb.org/t/p/w780/" + tmdbRes.results[0].backdrop_path);
+//        backdrop.attr("style","background-image: url('https://image.tmdb.org/t/p/w780/')" + tmdbRes.results[0].backdrop_path);
+
+//        $("#backdrop").html(backdrop);
 
       $.ajax({
           url: getSimURL,
