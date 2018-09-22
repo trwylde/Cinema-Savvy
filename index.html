@@ -36,62 +36,35 @@
 
 
     <div class="container">
-      <div class="col s6 offset-3" id="movie-info-display">
+      <div class="col s5 card-panel pink darken-2 white-text" id="movie-info-display">
         <div class="card horizontal">
           <div class="card-image">
-            <img src="images/movie-poster.png" id="movie-poster">
+            <img src="images/mansoor-637844-unsplash.jpg" id="movie-poster" alt="mansoor">
           </div>
-          <div class="card-stacked">
+          <div class="card-stacked pink accent-3">
             <span class="card-title"></span>
-            <h4 class="header">Fight Club</h4>
-              <div id="ytplayer">
+            <h4 class="header"></h4>
 
-                <table id="table" class="centered">
-                  <thead>
-                    <tr>
-                      <th scope="col">Genre</th>
-                      <th scope="col">Score</th>
-                      <th scope="col">Rating</th>
-                      <th scope="col">Runtime</th>
-                    </tr>
-                  </thead>
-            
-                  <tbody>
-                    
-                  </tbody>
-                </table>
+            <table id="table" class="centered"></table>
+            <div id="plot"></div>
 
-                <div id="plot"></div>
+            <div class="card-action" id="play-button"></div>
+              
+            <div id="ytplayer"></div>
 
-              </div>
-
-              <div class="card-action" id="play-button">
-                <a class="btn-floating btn-medium waves-effect waves-light cyan" id="play-button"><i class="material-icons">play_circle_outline</i></a>    
-                <p>Play Trailer</p>
-              </div>
           </div>
         </div>
 
-        <div class="card-action">
-          <span class="card-title" id="review-link">
+        <div class="container pink darken-2">
+          <span id="review-link"><h5>New York Times Review</h5></span>
+          <p>Read the Review</p>
         </div>
       </div> <!--closes col s7-->
 
     </div>
        
     <div id="rel-posters" class="container"></div>
-  
-<!--
-    <style>
-    body {
-  background-image: url("images/florian-klauer-415-unsplash.jpg");
-  background-size: cover;
-}
 
-.movie-info .card {
-  background: rgba(0,0,0, .6);
-}
-    </style> -->
   <!-- Compiled and minified JavaScript for Materialize-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
