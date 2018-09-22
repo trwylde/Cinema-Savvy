@@ -32,6 +32,13 @@ $(document).ready(function () {
       var imdbScore= response.imdbRating;
       var title = response.Title;
      // var info = "<h5> Rating: " + rating + " " + "Runtime: " + runtime + "</h5>" +  "<h6> Plot : " + plot + "</h6>";
+     var tableHead = $("<tr>");
+     var th1 = $("<th>").html("Genre")
+     var th2 = $("<th>").html("IMDB Score")
+     var th3 = $("<th>").html("Rating")
+     var th4 = $("<th>").html("Runtime")
+     tableHead.append(th1,th2,th3,th4);
+
      var newRow = $("<tr>");
      var td1 = $("<td>").html(genre);
      var td2 = $("<td>").html(imdbScore);
@@ -41,8 +48,9 @@ $(document).ready(function () {
 
 
       $("#movie-poster").attr("src", response.Poster);
-      $("#table").append(newRow);
+      $("#table").append(tableHead,newRow);
       $("#plot").html("<h6> Plot : " + plot + "</h6>");
+      $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
       $(".header").text(title);
 
 
