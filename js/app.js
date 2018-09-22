@@ -69,8 +69,8 @@ $(document).ready(function () {
       var headlineURL = nyresponse.results[0].link.url;
       console.log(headline + " " + headlineURL);
 
-      $("#review-link").append("<h5> New York Times Review </h5>  <p><a href=" + headlineURL + ">" + headline + "</a></p>");
-
+      $("#review-link").append("<h5> New York Times Review </h5> ");
+      $("#read-review").html("<h6><a href=" + headlineURL + ">" + headline + "</a></h6>");
   });
 
   var getTMDBIDURL = "https://api.themoviedb.org/3/search/movie?api_key=de609cecd260e54111a9794f1dff58a7&language=en-US&query=" + movie + "'";
