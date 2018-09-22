@@ -10,3 +10,7 @@ body {
   cursor: pointer;
 }
 
+#backdrop {
+  background-position: center;
+  background-size: cover;
+}
