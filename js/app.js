@@ -53,8 +53,8 @@ $(document).ready(function () {
 
       $("#movie-poster").attr("src", response.Poster);
       $("#table").append(tableHead,newRow);
-      $("#plot").html("<h6> Plot : " + plot + "</h6>");
-      $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
+      $("#plot").html("<p> Plot : " + plot + "</p>");
+      $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink accent-2'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
       $(".header").text(title);
 
 
@@ -91,16 +91,11 @@ $(document).ready(function () {
 
       console.log(tmdbRes.results[0].backdrop_path);
 
-      var a = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
-//      $("#backdrop").css('background-image', 'url(' + getImageSrc + ')');
-      console.log(a);
-
-//      var backdrop = $("<img>");
-//        backdrop.addClass("heroImage");
-//        backdrop.attr("src","https://image.tmdb.org/t/p/w780/" + tmdbRes.results[0].backdrop_path);
-//        backdrop.attr("style","background-image: url('https://image.tmdb.org/t/p/w780/')" + tmdbRes.results[0].backdrop_path);
-
-//        $("#backdrop").html(backdrop);
+      var backdrop = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
+                    //$('.coin').css('background-image', `url(${path.to.image.url.from.api.object})`);
+                    // var queryURL = "https://api.giphy.com/v1/stickers/search?q=bone&api_key=yYzxXmzM0JJiOROiIif2ut7eQWi76TTf";
+                    // $('.coin').css('background-image', `url(https://giphy.com/stickers/3d-skeleton-3ohhwqkQej5tvcn5NC)`);
+                    https://giphy.com/stickers/3d-skeleton-3ohhwqkQej5tvcn5NC
 
       $.ajax({
           url: getSimURL,
@@ -119,6 +114,7 @@ $(document).ready(function () {
               newImg.attr("src","https://image.tmdb.org/t/p/w185/" + simRes.results[i].poster_path );
               newImg.attr("id",simRes.results[i].title );
               newImg.attr("style","padding: 10px 20px");
+              
 
               $("#rel-posters").append(newImg);
               
@@ -148,7 +144,7 @@ $(document).ready(function () {
         ytFrame.attr("frameborder",0);
         $("#ytplayer").append(ytFrame);
 
-
+      
 
     });
 
@@ -198,7 +194,7 @@ $(document).ready(function () {
       
             $("#movie-poster").attr("src", response.Poster);
             $("#table").append(tableHead,newRow);
-            $("#plot").html("<h6> Plot : " + plot + "</h6>");
+            $("#plot").html("<p> Plot : " + plot + "</p>");
             $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
             $(".header").text(title);
       
@@ -252,7 +248,7 @@ $(document).ready(function () {
                     newImg.attr("style","padding: 10px 20px");
       
                     $("#rel-posters").append(newImg);
-                    
+                    var newBackdrop = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
       
                 }
           
