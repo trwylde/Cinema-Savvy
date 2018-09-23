@@ -42,17 +42,66 @@ $(document).ready(function() {
             var th4 = $("<th>").html("Runtime")
             tableHead.append(th1, th2, th3, th4);
 
-            var newRow = $("<tr>");
-            var td1 = $("<td>").html(genre);
-            var td2 = $("<td>").html(imdbScore);
-            var td3 = $("<td>").html(rating);
-            var td4 = $("<td>").html(runtime);
-            newRow.append(td1, td2, td3, td4);
+            if(genre === "N/A"){
+                var newRow = $("<tr>");
+                var td1 = $("<td>").html("Data Unavailable");
+                var td2 = $("<td>").html(imdbScore);
+                var td3 = $("<td>").html(rating);
+                var td4 = $("<td>").html(runtime);
+                newRow.append(td1, td2, td3, td4);
+
+            }
+            else if(imdbScore == "N/A"){
+                var newRow = $("<tr>");
+                var td1 = $("<td>").html(genre);
+                var td2 = $("<td>").html("Data Unavailable");
+                var td3 = $("<td>").html(rating);
+                var td4 = $("<td>").html(runtime);
+                newRow.append(td1, td2, td3, td4);
+            }
+            else if(rating === "N/A"){
+                var newRow = $("<tr>");
+                var td1 = $("<td>").html(genre);
+                var td2 = $("<td>").html(imdbScore);
+                var td3 = $("<td>").html("Data Unavailable");
+                var td4 = $("<td>").html(runtime);
+                newRow.append(td1, td2, td3, td4);
+            }
+            else if(runtime === "N/A"){
+                var newRow = $("<tr>");
+                var td1 = $("<td>").html(genre);
+                var td2 = $("<td>").html(imdbScore);
+                var td3 = $("<td>").html(rating);
+                var td4 = $("<td>").html("Data Unavailable");
+                newRow.append(td1, td2, td3, td4);
+            }
+            else{
+                var newRow = $("<tr>");
+                var td1 = $("<td>").html(genre);
+                var td2 = $("<td>").html(imdbScore);
+                var td3 = $("<td>").html(rating);
+                var td4 = $("<td>").html(runtime);
+                newRow.append(td1, td2, td3, td4);
+            }
+
+            if(response.Poster === "N/A"){
+                
+                $("#movie-poster").attr("src", "./images/mansoor-637844-unsplash.jpg");
+            }
+            else{
+                $("#movie-poster").attr("src", response.Poster);
+                $("#movie-poster").attr("alt", title);
+            }
 
 
-            $("#movie-poster").attr("src", response.Poster);
             $("#table").append(tableHead, newRow);
-            $("#plot").html("<h6> Plot : " + plot + "</h6>");
+            if(plot === "N/A"){
+                $("#plot").html("<h6> Plot : Data Unavailable </h6>");
+            }
+            else{
+                $("#plot").html("<h6> Plot : " + plot + "</h6>");
+            }
+            
             $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
             $(".header").text(title);
 
