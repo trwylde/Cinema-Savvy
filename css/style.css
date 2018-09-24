@@ -65,3 +65,13 @@ h5 {
   font-family: 'Arima Madurai', cursive;
   text-shadow: 2px 2px 4px #1a0111;
 }
+
+
+
+.movie-info .card {
+  background: rgba(0,0,0, .6);
+}
+
+.simPosters{
+  cursor: pointer;
+}
