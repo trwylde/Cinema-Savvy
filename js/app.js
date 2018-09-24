@@ -221,10 +221,10 @@ $(document).ready(function() {
 
     $("body").on("click", ".simPosters", function() {
 
-        var selectedPoster = $(this).attr("id");
+        movie = $(this).attr("id");
 
-        console.log(selectedPoster);
-        callAPI(selectedPoster);
+        console.log(movie);
+        callAPI(movie);
 
 
     });
