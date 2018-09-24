@@ -96,10 +96,10 @@ $(document).ready(function() {
 
           $("#table").append(tableHead, newRow);
           if(plot === "N/A"){
-              $("#plot").html("<h6> Plot : Data Unavailable </h6>");
+              $("#plot").html("<p> Plot : Data Unavailable </p>");
           }
           else{
-              $("#plot").html("<h6> Plot : " + plot + "</h6>");
+              $("#plot").html("<p> Plot : " + plot + "</p>");
           }
           
           $("#play-button").html("<a class='btn-floating btn-large waves-effect waves-light pink'><i class='material-icons'>play_circle_outline</i></a>" + "<p>Play Trailer</p>");
