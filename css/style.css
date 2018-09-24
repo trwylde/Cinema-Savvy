@@ -6,5 +6,11 @@ body {
 .movie-info .card {
   background: rgba(0,0,0, .6);
 }
+.simPosters{
+  cursor: pointer;
+}
 
-
+#backdrop {
+  background-position: center;
+  background-size: cover;
+}
