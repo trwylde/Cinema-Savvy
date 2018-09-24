@@ -27,6 +27,7 @@ body {
 .nav-wrapper {
   font-family: 'Lobster Two', cursive;
   font-weight: 800;
+  text-shadow: 1px 1px 3px #1a0111;
 }
 
 #movie-title-field {
@@ -41,6 +42,7 @@ body {
 #welcome {
   font-family: 'Lobster Two', cursive;
   font-weight: 800;
+  text-shadow: 2px 2px 4px #1a0111;
 }
 .header {
   font-family: 'Arima Madurai', cursive;
