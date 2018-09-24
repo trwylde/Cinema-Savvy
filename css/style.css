@@ -1,0 +1,16 @@
+body {
+  background-image: url("../images/florian-klauer-415-unsplash.jpg");
+  background-size: cover;
+}
+
+.movie-info .card {
+  background: rgba(0,0,0, .6);
+}
+.simPosters{
+  cursor: pointer;
+}
+
+#backdrop {
+  background-position: center;
+  background-size: cover;
+}

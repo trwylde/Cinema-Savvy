@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cinema Savvy</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper pink darken-2">
+            <a href="#!" class="brand-logo"><i class="material-icons">movie_filter</i>Cinema Savvy</a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <div class="input-field col s5">
+                        <input placeholder="Movie Title" id="movie-title-field" type="text" class="validate">
+                    </div>
+                </li>
+
+                <li>
+                    <a href=""><i id="searchButton" class="material-icons">search</i></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="col s5 card-panel pink darken-2 white-text" id="movie-info-display">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="images/mansoor-637844-unsplash.jpg" id="movie-poster" alt="mansoor">
+                </div>
+                <div id="backdrop" class="card-stacked pink accent-3">
+                    <h4 class="header"></h4>
+                    <div id="welcome" class="container center-align">
+                        <h3>Welcome to</h3>
+                        <h3><i class="medium material-icons">movie_filter</i>Cinema Savvy!</h3>
+                        <h3>Enter a movie title to open Pandora's Box</h3>
+                    </div>
+                    <table id="table" class="centered"></table>
+                    <div id="plot"></div>
+
+                    <div id="play-button"></div>
+
+                    <div id="ytplayer"></div>
+
+                </div>
+            </div>
+
+            <div class="container pink darken-2">
+                <span id="review-link">
+                    <h5>New York Times Review</h5>
+                </span>
+                <span id="read-review">Read the Review</span>
+            </div>
+        </div>
+        <!--closes col s7-->
+
+    </div>
+
+    <div id="rel-posters" class="container"></div>
+
+    <!-- Compiled and minified JavaScript for Materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+
+</html>
