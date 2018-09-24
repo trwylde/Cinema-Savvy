@@ -95,10 +95,7 @@ $(document).ready(function () {
       console.log(tmdbRes.results[0].backdrop_path);
 
       var backdrop = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
-                    //$('.coin').css('background-image', `url(${path.to.image.url.from.api.object})`);
-                    // var queryURL = "https://api.giphy.com/v1/stickers/search?q=bone&api_key=yYzxXmzM0JJiOROiIif2ut7eQWi76TTf";
-                    // $('.coin').css('background-image', `url(https://giphy.com/stickers/3d-skeleton-3ohhwqkQej5tvcn5NC)`);
-                    https://giphy.com/stickers/3d-skeleton-3ohhwqkQej5tvcn5NC
+
 
       $.ajax({
           url: getSimURL,
