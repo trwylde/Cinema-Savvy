@@ -1,8 +1,15 @@
+/* 
+font-family: 'Spirax', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Arima Madurai', cursive;
+*/
+
 body {
   background-image: url("../images/florian-klauer-415-unsplash.jpg");
   background-size: cover;
 }
-
 .movie-info .card {
   background: rgba(0,0,0, .6);
 }
@@ -13,4 +20,48 @@ body {
 #backdrop {
   background-position: center;
   background-size: cover;
+  background-color: rgba(0,0,0,1);
+  background-blend-mode: multiply;
+}
+
+.nav-wrapper {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 800;
+}
+
+#movie-title-field {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 24px;
+  color: white;
+}
+
+::placeholder {
+  color: gray;
+}
+#welcome {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 800;
+}
+.header {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 38px;
+  font-weight: 900;  
+  text-shadow: 2px 2px 4px black, 0 0 25px rgb(42, 42, 156), 0 0 5px darkblue;
+}
+#review {
+  font-family: 'Arima Madurai', cursive;
+} 
+#movie-info-display {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+th {
+  font-size: 28px;
+  text-shadow: 2px 2px 4px #1a0111;
+}
+h5 {
+  font-family: 'Arima Madurai', cursive;
+  text-shadow: 2px 2px 4px #1a0111;
 }
