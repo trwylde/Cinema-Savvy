@@ -139,7 +139,7 @@ $(document).ready(function() {
 
           console.log(tmdbRes.results[0].backdrop_path);
 
-          //var a = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
+          var a = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
 
 
           $.ajax({
