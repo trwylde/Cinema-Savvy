@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-  $("#play-button").on("click", function() {
       $("#play-button").hide();
-  })
 
   var movie = "Fight Club";
 
@@ -212,10 +210,27 @@ $(document).ready(function() {
       ytFrame.attr("src", "https://www.youtube.com/embed?listType=search&list=" + movie);
       ytFrame.attr("frameborder", 0);
       $("#ytplayer").append(ytFrame);
-
-
-
   });
+
+//========== Modal to Display Trailer ================================
+    var modal = document.getElementById('ytModal');
+    var btn = document.getElementById("play-button");
+    var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+          modal.style.display = "none";
+          $("#ytplayer").empty();
+      }
+
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
 
   $("body").on("click", ".simPosters", function() {
 
