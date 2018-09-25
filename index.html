@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cinema Savvy</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Lobster+Two|Merienda|Patrick+Hand+SC|Spirax" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cinema Savvy</title>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Lobster+Two|Merienda|Patrick+Hand+SC|Spirax" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -40,64 +38,48 @@
     
 
     <div class="container">
-        <div class="col s5 card-panel pink darken-2 white-text" id="movie-info-display">
-            <div class="card horizontal z-depth-5">
-                <div class="card-image hide-on-small-only">
-                    <img class="responsive-img" src="images/mansoor-637844-unsplash.jpg" id="movie-poster" alt="mansoor">
-                </div>
-                <div id="backdrop" class="card-stacked pink accent-3">
-                    <h4 class="header"></h4>
-                    <div id="welcome" class="container center-align">
-                        <h3>Welcome to</h3>
-                        <h3><i class="medium material-icons">movie_filter</i>   Cinema Savvy!</h3>
-                        <h3>Enter a movie title to open Pandora's Box</h3>
-                    </div>
-                    <table id="table" class="centered"></table>
-                    <div id="plot"></div>
+      <div class="col s5 card-panel pink darken-2 white-text" id="movie-info-display">
+        <div class="card horizontal z-depth-5">
+          <div class="card-image hide-on-small-only">
+            <img class="responsive-img" src="images/mansoor-637844-unsplash.jpg" id="movie-poster" alt="mansoor">
+          </div>
+          <div id="backdrop" class="card-stacked pink accent-3">
+            <h4 class="header"></h4>
+              <div id="welcome" class="container center-align">
+                <h3>Welcome to</h3>
+                <h3><i class="medium material-icons">movie_filter</i>   Cinema Savvy!</h3>
+                <h3>Enter a movie title to open Pandora's Box</h3>
+              </div>
+              <table id="table" class="centered"></table>
+              <div id="plot"></div>
 
-                    <!-- <div id="play-button"></div> -->
+                <!-- Trigger/Open The Modal -->
+              <div class="footer" id="play-button"></div>
 
-                    <!-- <div id="ytplayer"></div> -->
-
-                    <!-- Trigger/Open The Modal -->
-                    <div id="play-button"></div>
-
-                      <!-- The Modal -->
-                      <!-- <div id="ytModal" class="modal"> -->
-
-                        <!-- Modal content -->
-                        <!-- <div class="modal-content">
-                          <span class="close">&times;</span>
-                          <h5><i class="small material-icons">movie_filter</i>Brought to you by Cinema Savvy!</h5>
-                          <div id="ytplayer"></div>
-                        </div> -->
-
-                      <!-- </div> -->
-
-                </div>
-            </div>
-
-            <div class="container pink darken-2">
-                <span id="review-link">
-                    <h5>New York Times Review</h5>
-                </span>
-                <span id="read-review"><h6>Read the Review</h6></span>
-            </div>
+          </div>
         </div>
+
+        <div class="container pink darken-2">
+          <span id="review-link">
+            <h5>New York Times Review</h5>
+          </span>
+          <span id="read-review">
+            <h6>Read the Review</h6>
+          </span>
+        </div>
+      </div>
     </div>
 
     <div id="rel-posters" class="container"></div>
 
-    <!-- The Modal -->
+      <!-- The Modal -->
     <div id="ytModal" class="modal">
-
-      <!-- Modal content -->
+        <!-- Modal content -->
       <div class="modal-content white-text ">
         <span class="close"><i class="small material-icons white-text">close</i></span>
         <h5><i class="small material-icons">movie_filter</i>Brought to you by Cinema Savvy!</h5>
         <div id="ytplayer" class="video-container"></div>
       </div>
-
     </div>
 
     <!-- Compiled and minified JavaScript for Materialize-->
