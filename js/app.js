@@ -138,7 +138,8 @@ $(document).ready(function() {
           console.log(tmdbRes.results[0].backdrop_path);
 
           var a = $("#backdrop").css("background-image", `url(https://image.tmdb.org/t/p/w780/${tmdbRes.results[0].backdrop_path})`);
-
+            $("#backdrop").removeClass("pink pink accent-3");
+            $("#backdrop").addClass("pink lighten-2");
 
           $.ajax({
               url: getSimURL,
