@@ -208,7 +208,7 @@ $(document).ready(function() {
       ytFrame.attr("width", 540);
       ytFrame.attr("height", 360);
       ytFrame.attr("allow", "autoplay");
-      ytFrame.attr("src", "https://www.youtube.com/embed?listType=search&list=" + movie);
+      ytFrame.attr("src", "https://www.youtube.com/embed?listType=search&list=" + movie + "trailer");
       ytFrame.attr("frameborder", 0);
       $("#ytplayer").append(ytFrame);
   });
